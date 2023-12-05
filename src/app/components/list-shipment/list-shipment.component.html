@@ -1,0 +1,27 @@
+<div class="row my-3">
+    <div class="col-md-6">
+        <h2>List of Addresses</h2>
+    </div>
+    <div class="col-md-6 text-right">
+        <button class="btn btn-primary"></button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6" *ngFor="let shipment of shipments"> 
+        <div class="card border-primary mb-3" >
+            <div class="card-header">Type : {{shipment.type}}</div>
+            <div class="card-body">
+              <ul>
+                <li class="list-group-item"><strong>Origin : </strong>{{shipment.origin}}</li>
+                <li class="list-group-item"><strong>type : </strong>{{shipment.weight}}</li>
+                <li class="list-group-item"><strong>weight : </strong>{{shipment.dimensions}}</li>
+                <li class="list-group-item"><strong>dimensions : </strong>{{shipment.price}}</li>
+                <li class="list-group-item text-center">
+                    <button class="btn btn-primary mr-2">Edit</button>
+                    <button class="btn btn-dark mr-2" (click)="onDeleteShipment(shipment.shipmentId)">Delete</button>
+                </li>
+              </ul>
+            </div>
+    </div>
+</div>

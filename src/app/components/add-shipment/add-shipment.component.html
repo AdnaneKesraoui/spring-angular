@@ -1,0 +1,53 @@
+<div>
+    <form #shipmentForm="ngForm" (ngSubmit)="addShipment(shipmentForm.value)">
+        <fieldset>
+          <legend>Add shipment</legend>
+          <div class="form-group">
+            <label class="col-form-label mt-2" for="inputDefault">Origin</label>
+            <input type="text" name="origin" ngModel class="form-control" placeholder="Origin" id="inputDefault">
+          </div>
+          <div class="form-group">
+            <label class="col-form-label mt-2" for="inputDefault">Weight</label>
+            <input type="text" name="weight" ngModel class="form-control" placeholder="Weight" id="inputDefault">
+          </div>
+          <div class="form-group">
+            <label class="col-form-label mt-2" for="inputDefault">Dimensions</label>
+            <input type="text" name="dimensions" ngModel class="form-control" placeholder="Dimensions" id="inputDefault" >
+          </div>
+          <div class="form-group">
+            <label class="col-form-label mt-2" for="inputDefault">Price</label>
+            <input type="text"name="price" ngModel class="form-control" placeholder="Price" id="inputDefault" >
+          </div>
+          <div class="form-group">
+            <label for="exampleSelect1" ngModel class="form-label mt-4">City</label>
+            <select class="form-select" id="exampleSelect1">
+              <option>El jadida</option>
+              <option>Casablanca</option>
+              <option>Marrakech</option>
+              <option>Tanger</option>
+              <option>Safi</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <fieldset class="form-group">
+            <legend class="mt-2">Type of Shipment</legend>
+            <div class="form-check">
+              
+              <label class="form-check-label" for="optionsRadios1">
+                <input  name="type" ngModel class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                Fragile
+              </label>
+              <br>
+              
+              <label class="form-check-label" for="optionsRadios2">
+                <input name="type" ngModel class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                Normal
+              </label>
+            </div>
+          </fieldset>
+          
+          <button type="submit" class="btn btn-block btn-primary mt-2 mr-auto">Submit</button>
+        </fieldset>
+      </form>
+    
+</div>
